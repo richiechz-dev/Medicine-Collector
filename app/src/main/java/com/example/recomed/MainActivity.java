@@ -27,7 +27,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class MainActivity extends AppCompatActivity {
     Button access;
     EditText psw, email;
-    TextView registro;
+    Button registro;
     FirebaseAuth auth;
 
     @Override
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        registro=(TextView) findViewById(R.id.lblRegister);
+        registro=(Button) findViewById(R.id.btnLogin2);
         auth = FirebaseAuth.getInstance();
 
         // Write a message to the database
