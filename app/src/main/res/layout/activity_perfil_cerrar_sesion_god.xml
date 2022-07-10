@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Perfil_cerrar_sesion_GOD">
+    tools:context=".perfil_cerrar_sesion_GOD">
 
     <Button
         android:id="@+id/button"
@@ -13,26 +13,33 @@
         android:layout_marginBottom="52dp"
         android:text="Button"
         app:layout_constraintBottom_toTopOf="@+id/button3"
-        tools:layout_editor_absoluteX="113dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         tools:text="modificar datos" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="184dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="60dp"
         android:text="Button"
         app:layout_constraintBottom_toTopOf="@+id/button4"
-        tools:layout_editor_absoluteX="114dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
         tools:text="cerrar sesion" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="178dp"
         android:layout_height="50dp"
+        android:layout_marginBottom="196dp"
         android:text="Button"
-        tools:layout_editor_absoluteX="115dp"
-        tools:layout_editor_absoluteY="466dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:text="eliminar cuenta" />
 
     <TextView
@@ -40,7 +47,11 @@
         android:layout_width="58dp"
         android:layout_height="29dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/button"
-        tools:layout_editor_absoluteY="125dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.143"
         tools:text="Perfil" />
 </androidx.constraintlayout.widget.ConstraintLayout>

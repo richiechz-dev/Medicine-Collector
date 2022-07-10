@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Perfil_cerrar_sesion_GOD extends AppCompatActivity {
+public class perfil_cerrar_sesion_GOD extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
