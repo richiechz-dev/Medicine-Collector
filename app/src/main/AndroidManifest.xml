@@ -21,9 +21,6 @@
             android:label="@string/title_activity_perfil_cerrar_sesion"
             android:theme="@style/Theme.RecoMed.NoActionBar" />
         <activity
-            android:name=".principal"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
