@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registro"
+    android:background="@drawable/fondoregistro">
+
+
+    <TextView
+        android:id="@+id/recoMed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Recolección de medicamentos"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/txtApellidoP"
+        android:layout_width="358dp"
+        android:layout_height="52dp"
+        android:layout_above="@+id/txtApellidoM"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="25dp"
+        android:background="#30ffffff"
+        android:drawableLeft="@drawable/ic_baseline_emoji_emotions_24"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:hint="Apellido Paterno"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/black" />
+
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_width="358dp"
+        android:layout_height="52dp"
+        android:layout_above="@+id/txtApellidoP"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="26dp"
+        android:background="#30ffffff"
+        android:drawableLeft="@drawable/ic_baseline_emoji_emotions_24"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/black" />
+
+    <EditText
+        android:id="@+id/txtApellidoM"
+        android:layout_width="358dp"
+        android:layout_height="52dp"
+        android:layout_above="@+id/txtEmail"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="24dp"
+        android:background="#30ffffff"
+        android:drawableLeft="@drawable/ic_baseline_emoji_emotions_24"
+        android:drawablePadding="20dp"
+        android:hint="Apellido Materno"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/black" />
+
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="358dp"
+        android:layout_height="52dp"
+        android:layout_above="@+id/txtPsw3"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="23dp"
+        android:background="#30ffffff"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawablePadding="20dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/black" />
+
+    <EditText
+        android:id="@+id/txtPsw3"
+        android:layout_width="358dp"
+        android:layout_height="52dp"
+        android:layout_above="@+id/btnregistro"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="46dp"
+        android:background="#30ffffff"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="20dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/black" />
+
+    <Button
+        android:id="@+id/btnregistro"
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtApellidoM"
+        android:layout_alignEnd="@+id/txtApellidoM"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="73dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Registrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtApellidoM" />
+
+    <Button
+        android:id="@+id/btnRegresarR"
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtApellidoM"
+        android:layout_alignEnd="@+id/txtApellidoM"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Regresar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtApellidoM" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="125dp"
+        android:layout_height="116dp"
+        android:layout_below="@+id/recoMed"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="151dp"
+        app:srcCompat="@drawable/logomedicinas" />
+</RelativeLayout>

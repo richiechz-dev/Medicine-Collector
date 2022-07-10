@@ -96,19 +96,6 @@
         android:backgroundTint="#4CAF50"
         android:text="Login" />
 
-    <Button
-        android:id="@+id/btnLogin2"
-        android:layout_width="330dp"
-        android:layout_height="55dp"
-        android:layout_below="@+id/lblForgot"
-        android:layout_alignStart="@+id/txtPsw"
-        android:layout_alignEnd="@+id/txtPsw"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="130dp"
-        android:layout_marginEnd="25dp"
-        android:backgroundTint="#4CAF50"
-        android:text="Login" />
-
     <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"

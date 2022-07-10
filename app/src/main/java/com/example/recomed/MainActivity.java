@@ -27,7 +27,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class MainActivity extends AppCompatActivity {
     Button access;
     EditText psw, email;
-    Button registro;
+    TextView registro;
     FirebaseAuth auth;
 
     @Override
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        registro=(Button) findViewById(R.id.btnLogin2);
+        registro=(TextView) findViewById(R.id.lblRegister);
         auth = FirebaseAuth.getInstance();
 
         // Write a message to the database
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         registro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, register.class);
+                Intent i = new Intent(MainActivity.this, registro.class);
                 startActivity(i);
             }
         });
