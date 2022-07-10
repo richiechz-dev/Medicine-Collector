@@ -35,17 +35,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        registro=(TextView) findViewById(R.id.recoMed);
-
-        registro.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, register.class);
-                startActivity(i);
-            }
-        });
-
+        registro=(TextView) findViewById(R.id.lblRegister);
         auth = FirebaseAuth.getInstance();
 
         // Write a message to the database
@@ -67,6 +57,14 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     loginUser(email1, psw1);
                 }
+            }
+        });
+
+        registro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, register.class);
+                startActivity(i);
             }
         });
     }
