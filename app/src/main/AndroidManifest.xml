@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecoMed">
         <activity
+            android:name=".UserProfile"
+            android:exported="false" />
+        <activity
             android:name=".registro"
             android:exported="false" />
         <activity
             android:name=".principal"
-            android:exported="false" />
-        <activity
-            android:name=".perfil_cerrar_sesion_GOD"
             android:exported="false" />
         <activity
             android:name=".Borrar"
