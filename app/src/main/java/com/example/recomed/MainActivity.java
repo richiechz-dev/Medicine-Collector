@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.safetynet.SafetyNet;
@@ -26,13 +27,25 @@ import com.google.firebase.database.FirebaseDatabase;
 public class MainActivity extends AppCompatActivity {
     Button access;
     EditText psw, email;
-
+    TextView registro;
     FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        registro=(TextView) findViewById(R.id.recoMed);
+
+        registro.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, register.class);
+                startActivity(i);
+            }
+        });
+
         auth = FirebaseAuth.getInstance();
 
         // Write a message to the database
