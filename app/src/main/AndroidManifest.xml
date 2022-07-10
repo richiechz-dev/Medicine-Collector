@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecoMed">
         <activity
+            android:name=".register"
+            android:exported="false" />
+        <activity
             android:name=".Borrar"
             android:exported="false" />
         <activity
