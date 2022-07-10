@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecoMed">
         <activity
+            android:name=".Borrar"
+            android:exported="false" />
+        <activity
             android:name=".perfil.Perfil_cerrar_sesion"
             android:exported="false"
             android:label="@string/title_activity_perfil_cerrar_sesion"
