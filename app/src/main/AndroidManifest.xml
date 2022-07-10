@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecoMed">
         <activity
+            android:name=".principal"
+            android:exported="false" />
+        <activity
             android:name=".perfil_cerrar_sesion_GOD"
             android:exported="false" />
         <activity
