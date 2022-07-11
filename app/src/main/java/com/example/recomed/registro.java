@@ -126,10 +126,10 @@ public class registro extends AppCompatActivity {
                                 Log.d("TAG", "onSuccess: Datos registrados"+ userID);
                             }
                         });
-                        Toast.makeText(registro.this, "usuario registrado"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(registro.this, "Usuario registrado", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(registro.this, MainActivity.class));
                     }else{
-                        Toast.makeText(registro.this, "usuario no registrado"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(registro.this, "Usuario no registrado", Toast.LENGTH_SHORT).show();
                     }
                 }
             });
