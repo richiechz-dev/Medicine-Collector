@@ -55,6 +55,22 @@
                 android:layout_below="@id/textview_fullname"/>
         </RelativeLayout>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Barra de Puntos"
+            android:textAlignment="center"
+            android:textSize="22dp"
+            android:textStyle="bold">
+        </TextView>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressDrawable="@drawable/custom_progress"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -118,6 +134,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Cerrar Sesión"/>
+            <Button
+                android:id="@+id/start_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AÑADIR"
+                android:textAllCaps="false"/>
 
         </LinearLayout>
 

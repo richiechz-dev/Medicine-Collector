@@ -11,7 +11,7 @@
         android:theme="@style/Theme.RecoMed">
         <activity
             android:name=".UserProfile"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".registro"
             android:exported="false" />
