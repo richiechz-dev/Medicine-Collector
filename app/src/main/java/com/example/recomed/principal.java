@@ -15,7 +15,7 @@ public class principal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
-        RegresarP= findViewById(R.id.btnRegresarR);
+        RegresarP= findViewById(R.id.RegresarP);
 
         RegresarP.setOnClickListener(new View.OnClickListener() {
             @Override
