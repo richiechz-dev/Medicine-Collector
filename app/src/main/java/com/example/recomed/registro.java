@@ -53,8 +53,21 @@ public class registro extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
 
-        btnregistro.setOnClickListener(view -> {
-            createuser();
+        btnregistro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String name = txtNombre.getText().toString().trim();
+                String lname1 = txtApellidoP.getText().toString().trim();
+                String lname2 = txtApellidoM.getText().toString().trim();
+                String email1 = txtEmail.getText().toString().trim();
+                String psw = txtpsw.getText().toString().trim();
+
+                if(name.isEmpty() && lname1.isEmpty() && lname2.isEmpty() && email1.isEmpty() && psw.isEmpty()){
+                    Toast.makeText(registro.this, "Ingresa los datos", Toast.LENGTH_SHORT).show();
+                }else{
+                    createuser();
+                }
+            }
         });
 
         regresaR.setOnClickListener(new View.OnClickListener() {
