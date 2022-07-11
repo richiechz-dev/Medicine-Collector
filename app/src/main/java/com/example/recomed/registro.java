@@ -41,12 +41,12 @@ public class registro extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
-        regresaR=(Button) findViewById(R.id.btnRegresarR);
+        regresaR= findViewById(R.id.btnRegresarR);
         txtNombre = findViewById(R.id.txtNombre);
         txtApellidoP = findViewById(R.id.txtApellidoP);
         txtApellidoM = findViewById(R.id.txtApellidoM);
         txtEmail = findViewById(R.id.txtEmail);
-        txtpsw = findViewById(R.id.txtPsw);
+        txtpsw = findViewById(R.id.txtPsw3);
         btnregistro = findViewById(R.id.btnregistro);
 
 
