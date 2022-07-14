@@ -91,14 +91,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    protected void onStart(){
+    /*protected void onStart(){
         super.onStart();
         FirebaseUser usuario = auth.getCurrentUser();
         if (usuario != null){
             startActivity(new Intent(MainActivity.this, principal.class));
             finish();
         }
-    }
+    }*/
 
     private void ProcessLogin() {
         SafetyNet.getClient(MainActivity.this).verifyWithRecaptcha("6LdHplQfAAAAACgJJ7HHlVfAAeHpRcoUSBpZEcHs")

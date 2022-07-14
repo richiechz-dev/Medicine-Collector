@@ -10,22 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecoMed">
         <activity
+            android:name=".MainActivityAdmi"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
             android:name=".UserProfile"
-            android:exported="false"/>
+            android:exported="false">
+        </activity>
         <activity
             android:name=".registro"
             android:exported="false" />
         <activity
             android:name=".principal"
             android:exported="false" />
-        <activity
-            android:name=".Borrar"
-            android:exported="false" />
-        <activity
-            android:name=".perfil.Perfil_cerrar_sesion"
-            android:exported="false"
-            android:label="@string/title_activity_perfil_cerrar_sesion"
-            android:theme="@style/Theme.RecoMed.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

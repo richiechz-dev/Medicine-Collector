@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/InicioAdmi"
+            android:icon="@drawable/admi"
+            android:title="@string/inicio"/>
+        <item
+            android:id="@+id/ModificarAdmi"
+            android:icon="@drawable/modificar"
+            android:title="@string/modificacion"/>
+        <item
+            android:id="@+id/MostrarAdmi"
+            android:icon="@drawable/mostrar"
+            android:title="@string/mostrar"/>
+        <item
+            android:id="@+id/BorrarAdmi"
+            android:icon="@drawable/eliminar"
+            android:title="@string/borrar"/>
+        <item
+            android:id="@+id/Salir"
+            android:icon="@drawable/salir"
+            android:title="@string/salir"/>
+    </group>
+
+</menu>
