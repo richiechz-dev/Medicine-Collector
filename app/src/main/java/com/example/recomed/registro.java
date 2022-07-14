@@ -90,20 +90,20 @@ public class registro extends AppCompatActivity {
         String psw = txtpsw.getText().toString();
 
         if (TextUtils.isEmpty(nombre)){
-            txtEmail.setError("ingrese un Nombre");
-            txtEmail.requestFocus();
+            txtNombre.setError("Ups! ingresa tu nombre");
+            txtNombre.requestFocus();
         }else if (TextUtils.isEmpty(apellidoP)){
-            txtEmail.setError("ingrese un Apellido Paterno");
-            txtEmail.requestFocus();
+            txtApellidoP.setError("Ups! ingresa tu apellido paterno");
+            txtApellidoP.requestFocus();
         }else if (TextUtils.isEmpty(apellidoM)){
-            txtEmail.setError("ingrese un Apellido Materno");
-            txtEmail.requestFocus();
+            txtApellidoM.setError("Ups! ingresa tu apellido materno");
+            txtApellidoM.requestFocus();
         }else if (TextUtils.isEmpty(email)){
-            txtEmail.setError("ingrese un Email");
+            txtEmail.setError("Ups! ingresa tu Email");
             txtEmail.requestFocus();
         }else if (TextUtils.isEmpty(psw)){
-            txtEmail.setError("ingrese una Contraseña");
-            txtEmail.requestFocus();
+            txtpsw.setError("Ups! ingresa una contraseña");
+            txtpsw.requestFocus();
         }else{
 
             mAuth.createUserWithEmailAndPassword(email, psw).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
