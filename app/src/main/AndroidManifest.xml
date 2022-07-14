@@ -19,14 +19,6 @@
             android:name=".principal"
             android:exported="false" />
         <activity
-            android:name=".Borrar"
-            android:exported="false" />
-        <activity
-            android:name=".perfil.Perfil_cerrar_sesion"
-            android:exported="false"
-            android:label="@string/title_activity_perfil_cerrar_sesion"
-            android:theme="@style/Theme.RecoMed.NoActionBar" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

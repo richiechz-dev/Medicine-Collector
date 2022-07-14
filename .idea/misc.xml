@@ -11,6 +11,7 @@
         <entry key="..\:/Users/Dell i5/Documents/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/layout/activity_user_profile.xml" value="0.2" />
         <entry key="..\:/Users/Dell i5/Documents/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/layout/fragment_desesperado.xml" value="0.17255434782608695" />
         <entry key="..\:/Users/Dell i5/Documents/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/layout/fragment_putamadrerichie.xml" value="0.17255434782608695" />
+        <entry key="..\:/Users/GICRC/Documents/RecoleccionMedicamentos1.0/app/src/main/res/layout/activity_user_profile.xml" value="0.18432971014492755" />
         <entry key="..\:/Users/GICRC/Documents/recoMed/app/src/main/res/layout-w1240dp/content_scrolling.xml" value="0.1606425702811245" />
         <entry key="..\:/Users/GICRC/Documents/recoMed/app/src/main/res/layout/activity_main.xml" value="0.22780797101449277" />
         <entry key="..\:/Users/GICRC/Documents/recoMed/app/src/main/res/layout/activity_perfil_cerrar_sesion.xml" value="0.22780797101449277" />
@@ -35,5 +36,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.264" />
+      </ProjectState>
+    </option>
   </component>
 </project>
