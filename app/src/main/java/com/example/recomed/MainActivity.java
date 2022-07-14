@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
     }*/
 
     private void ProcessLogin() {
-        SafetyNet.getClient(MainActivity.this).verifyWithRecaptcha("6LdHplQfAAAAACgJJ7HHlVfAAeHpRcoUSBpZEcHs")
+        SafetyNet.getClient(MainActivity.this).verifyWithRecaptcha("6Ldbv-8gAAAAAFzLQihyOui9130tTwR_abNGSKEl")
                 .addOnSuccessListener(new OnSuccessListener<SafetyNetApi.RecaptchaTokenResponse>() {
                     @Override
                     public void onSuccess(SafetyNetApi.RecaptchaTokenResponse recaptchaTokenResponse) {
@@ -110,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
                         if(captchaToken != null){
                             if(!captchaToken.isEmpty()){
                                 processLoginStep(captchaToken, email.getText().toString(), psw.getText().toString());
+
                                 //seguimiento a otra interfaz
                                 startActivity(new Intent(MainActivity.this, principal.class));
                             }else{
@@ -117,8 +118,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                     }
-                })
-                .addOnFailureListener(new OnFailureListener() {
+                }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Toast.makeText(MainActivity.this, "Falla al cargar el Captcha", Toast.LENGTH_SHORT);
@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 
-    private void processLoginStep(String token, String username, String password) {
+    private void processLoginStep(String token, String email, String psw) {
         Log.d("CAPTCHA TOKEN", ""+token);
     }
 }
