@@ -6,8 +6,6 @@
     android:background="@drawable/fondo"
     tools:context=".MainActivity">
 
-
-
     <TextView
         android:id="@+id/recoMed"
         android:layout_width="match_parent"
