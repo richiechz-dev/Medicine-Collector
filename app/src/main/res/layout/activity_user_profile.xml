@@ -17,13 +17,6 @@
             android:layout_height="wrap_content"
             android:background="#EDE5E5">
 
-            <ImageView
-                android:id="@+id/image_back"
-                android:layout_width="52dp"
-                android:layout_height="56dp"
-                android:padding="2dp"
-                android:src="@drawable/ic_back_general" />
-
         </LinearLayout>
 
         <RelativeLayout
@@ -37,7 +30,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerVertical="true"
-                android:src="@drawable/ic_profile4"/>
+                android:src="@drawable/ic_profile4" />
 
             <TextView
                 android:id="@+id/textview_fullname"
@@ -87,7 +80,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/ic_profile3"
+                    android:drawableStart="@drawable/ic_profile_black"
                     android:drawablePadding="10dp"
                     android:text="Nombre"/>
 
@@ -103,7 +96,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/ic_email"
+                    android:drawableStart="@drawable/ic_email_black"
                     android:drawablePadding="10dp"
                     android:text="email"/>
 
@@ -119,7 +112,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/ic_password"
+                    android:drawableStart="@drawable/ic_profile_pin"
                     android:drawablePadding="10dp"
                     android:text="password"/>
 
@@ -129,17 +122,28 @@
                 android:id="@+id/btn_update"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Modificar"/>
+                android:text="Modificar"
+                app:cornerRadius="20dp"/>
             <Button
+                android:id="@+id/btn_cerrar_sesion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cerrar Sesión"/>
+                android:text="Cerrar Sesión"
+                app:cornerRadius="20dp"/>
             <Button
                 android:id="@+id/start_progress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="AÑADIR"
-                android:textAllCaps="false"/>
+                android:textAllCaps="false"
+                app:cornerRadius="20dp"/>
+            <Button
+                android:id="@+id/eliminar_cuenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Eliminar cuenta"
+                android:backgroundTint="@color/cardview_dark_background"
+                app:cornerRadius="20dp"/>
 
         </LinearLayout>
 
