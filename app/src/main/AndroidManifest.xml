@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecoMed">
         <activity
-            android:name=".paraactua"
-            android:exported="false" />
-        <activity
             android:name=".MainActivityAdmi"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar"></activity>
