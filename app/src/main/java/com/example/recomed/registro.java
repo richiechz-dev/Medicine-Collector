@@ -10,18 +10,24 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
+
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
+
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class registro extends AppCompatActivity {
 
@@ -47,27 +53,15 @@ public class registro extends AppCompatActivity {
         txtApellidoM = findViewById(R.id.txtApellidoM);
         txtEmail = findViewById(R.id.txtEmail);
         txtpsw = findViewById(R.id.txtPsw3);
-        btnregistro = findViewById(R.id.btnregistro);
+        btnregistro = (Button)findViewById(R.id.btnregistro);
 
 
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
 
-        btnregistro.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String name = txtNombre.getText().toString().trim();
-                String lname1 = txtApellidoP.getText().toString().trim();
-                String lname2 = txtApellidoM.getText().toString().trim();
-                String email1 = txtEmail.getText().toString().trim();
-                String psw = txtpsw.getText().toString().trim();
 
-                if(name.isEmpty() && lname1.isEmpty() && lname2.isEmpty() && email1.isEmpty() && psw.isEmpty()){
-                    Toast.makeText(registro.this, "Ingresa los datos", Toast.LENGTH_SHORT).show();
-                }else{
-                    createuser();
-                }
-            }
+        btnregistro.setOnClickListener(view -> {
+            createuser();
         });
 
         regresaR.setOnClickListener(new View.OnClickListener() {
@@ -110,20 +104,20 @@ public class registro extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task){
                     if (task.isSuccessful()){
-                        userID = mAuth.getCurrentUser().getUid();
+                        userID = Objects.requireNonNull(mAuth.getCurrentUser()).getUid();
                         DocumentReference documentReference = db.collection("users"). document(userID);
 
-                        Map<String, Object> user=new HashMap<>();
+                        Map<String,Object> user=new HashMap<>();
                         user.put("nombre", nombre);
                         user.put("ApellidoP", apellidoP);
                         user.put("ApellidoM", apellidoM);
                         user.put("Email", email);
                         user.put("contraseña", psw);
 
-                        documentReference.set(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                Log.d("TAG", "onSuccess: Datos registrados"+ userID);
+                            public void onSuccess(Void unused) {
+                                Log.d("TAG", "onSuccess: Datos registrados"+userID);
                             }
                         });
                         Toast.makeText(registro.this, "Usuario registrado", Toast.LENGTH_SHORT).show();
@@ -134,7 +128,9 @@ public class registro extends AppCompatActivity {
                 }
             });
 
+
         }
+
 
     }//end Createuser
 }
