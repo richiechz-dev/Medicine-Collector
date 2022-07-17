@@ -10,10 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecoMed">
         <activity
-            android:name=".MainActivityAdmi"
-            android:exported="false"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity
             android:name=".UserProfile"
             android:exported="false"/>
         <activity
