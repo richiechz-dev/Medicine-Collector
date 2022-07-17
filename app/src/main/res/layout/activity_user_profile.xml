@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context=".UserProfile">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -39,13 +40,19 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
                 android:layout_toEndOf="@+id/image_profile"
-                android:text="     Perfil"
+                android:text="Perfil"
                 android:textSize="24sp" />
 
             <TextView
+                android:id="@+id/textview_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textview_fullname"/>
+                android:layout_below="@id/textview_fullname"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/image_profile"
+                android:text="email"
+                android:textSize="14sp" />
         </RelativeLayout>
 
         <TextView
