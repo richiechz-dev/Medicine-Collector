@@ -1,5 +1,6 @@
 package com.example.recomed;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -19,7 +21,7 @@ public class UserProfile extends AppCompatActivity {
     private ProgressBar progressBar;
     Button startProgress, btnCerrarSesion;
     TextView perfil, textview_email;
-    EditText name, email;
+
     //Firebase
     FirebaseAuth mAuth;
 
@@ -35,12 +37,26 @@ public class UserProfile extends AppCompatActivity {
         //Variable de Perfil
         perfil = findViewById(R.id.textview_fullname);
         textview_email = findViewById(R.id.textview_email);
+        //btnCerrarSesion
+        btnCerrarSesion = findViewById(R.id.btn_cerrar_sesion);
 
 
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
 
         textview_email.setText(user.getEmail());
+
+
+
+
+        btnCerrarSesion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mAuth.signOut();
+                Intent intent = new Intent(UserProfile.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //barra de progreso
         startProgress.setOnClickListener(new View.OnClickListener() {
