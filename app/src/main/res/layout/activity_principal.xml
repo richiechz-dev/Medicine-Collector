@@ -38,5 +38,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.008" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="116dp"
+        android:layout_height="67dp"
+        android:text="Administrador"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
