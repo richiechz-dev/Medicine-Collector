@@ -99,11 +99,12 @@
     <string name="borrar">borrar</string>
     <string name="salir">salir</string>
     <string name="cristiano_ronaldo">Cristiano Ronaldo</string>
-    <string name="administrador">administrador</string>
+    <string name="administrador">Administrador</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nombre">Nombre</string>
     <string name="apellido">Apellido</string>
     <string name="password">Password</string>
     <string name="update">Update</string>
+    <string name="cerrar_sesion">Cerrar Sesion</string>
 </resources>

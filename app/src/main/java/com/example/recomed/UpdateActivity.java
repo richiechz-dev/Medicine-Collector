@@ -43,24 +43,24 @@ public class UpdateActivity extends AppCompatActivity {
                 String name = nombre.getText().toString().trim();
                 String ApeP = ApellidoP.getText().toString().trim();
                 String ApeM = ApellidoM.getText().toString().trim();
-                String psw = contraseña.getText().toString().trim();
+                String pswUp = contraseña.getText().toString().trim();
 
-                if (name.isEmpty() && ApeP.isEmpty() && ApeM.isEmpty() && psw.isEmpty()){
+                if (name.isEmpty() && ApeP.isEmpty() && ApeM.isEmpty() && pswUp.isEmpty()){
                     Toast.makeText(getApplicationContext(), "Ingresar los datos", Toast.LENGTH_LONG).show();
                 }else{
-                    updateUser(name,ApeP,ApeM,psw,id);
+                    updateUser(name,ApeP,ApeM,pswUp,id);
                 }
 
             }
         });
     }
 
-    private void updateUser(String name, String apeP, String apeM, String psw, String id) {
+    private void updateUser(String name, String apeP, String apeM, String pswUp, String id) {
         Map <String, Object> map = new HashMap<>();
         map.put("nombre", name);
         map.put("ApellidoP", apeP);
         map.put("ApellidoM", apeM);
-        map.put("Contraseña", psw);
+        map.put("Contraseña", pswUp);
 
         firebaseFirestore.collection("users").document(id).update(map).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
@@ -83,12 +83,12 @@ public class UpdateActivity extends AppCompatActivity {
                 String nameU = documentSnapshot.getString("nombre");
                 String apePU = documentSnapshot.getString("ApellidoP");
                 String apeMU = documentSnapshot.getString("ApellidoM");
-                String pswU = documentSnapshot.getString("contraseña");
+                String pswUR = documentSnapshot.getString("contraseña");
 
                 nombre.setText(nameU);
                 ApellidoP.setText(apePU);
                 ApellidoM.setText(apeMU);
-                contraseña.setText(pswU);
+                contraseña.setText(pswUR);
 
             }
         }).addOnFailureListener(new OnFailureListener() {
