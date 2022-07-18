@@ -77,7 +77,7 @@
         </LinearLayout>
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/btn_editarU"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#0634BA"
