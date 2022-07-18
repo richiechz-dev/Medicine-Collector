@@ -32,7 +32,7 @@ public class MainAdmin extends AppCompatActivity {
         FirestoreRecyclerOptions<user> firestoreRecyclerOptions =
                 new FirestoreRecyclerOptions.Builder<user>().setQuery(query, user.class).build();
 
-        mAdapter = new userAdapter(firestoreRecyclerOptions);
+        mAdapter = new userAdapter(firestoreRecyclerOptions,  this);
         mAdapter.notifyDataSetChanged();
         mRecycler.setAdapter(mAdapter);
 

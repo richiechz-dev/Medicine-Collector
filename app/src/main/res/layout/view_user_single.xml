@@ -6,19 +6,22 @@
     app:cardBackgroundColor="#51219E9E">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="85dp"
+        android:gravity="center_vertical"
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:orientation="vertical"
             android:paddingTop="10dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:orientation="horizontal"
                 android:paddingLeft="10dp">
 
@@ -40,33 +43,59 @@
 
                 <TextView
                     android:id="@+id/apellidoM"
-                    android:layout_width="411dp"
+                    android:layout_width="435dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="ApellidoMaterno"
                     android:textStyle="bold" />
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:orientation="vertical"
                 android:paddingLeft="10dp">
 
                 <TextView
                     android:id="@+id/email"
-                    android:layout_width="match_parent"
+                    android:layout_width="333dp"
                     android:layout_height="wrap_content"
                     android:text="Email"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/contra"
-                    android:layout_width="match_parent"
+                    android:layout_width="331dp"
                     android:layout_height="wrap_content"
                     android:text="Contraseña"
                     android:textStyle="bold" />
+
             </LinearLayout>
+
         </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#0634BA"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_create_24" />
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/btn_eliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#AE0707"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_delete_24" />
+
     </LinearLayout>
+
 </androidx.cardview.widget.CardView>
