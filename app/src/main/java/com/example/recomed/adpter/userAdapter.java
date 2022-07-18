@@ -1,10 +1,14 @@
 package com.example.recomed.adpter;
 
 
+import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,8 +17,17 @@ import com.example.recomed.R;
 import com.example.recomed.model.user;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import javax.xml.parsers.DocumentBuilder;
 
 public class userAdapter extends FirestoreRecyclerAdapter<user,userAdapter.ViewHolder> {
+
+    private FirebaseFirestore mfirestore = FirebaseFirestore.getInstance();
+    Activity activity;
 
     /**
      * Create a new RecyclerView adapter that listens to a Firestore Query.  See {@link
@@ -22,17 +35,42 @@ public class userAdapter extends FirestoreRecyclerAdapter<user,userAdapter.ViewH
      *
      * @param options
      */
-    public userAdapter(@NonNull FirestoreRecyclerOptions<user> options) {
+    public userAdapter(@NonNull FirestoreRecyclerOptions<user> options, Activity activity){
         super(options);
+        this.activity = activity;
     }
 
     @Override
     protected void onBindViewHolder(@NonNull ViewHolder viewHolder, int i, @NonNull user user) {
+        DocumentSnapshot documentSnapshot = getSnapshots().getSnapshot(viewHolder.getAbsoluteAdapterPosition());
+        final String id = documentSnapshot.getId();
+
         viewHolder.nombre.setText(user.getNombre());
         viewHolder.ApellidoP.setText(user.getApellidoP());
         viewHolder.ApellidoM.setText(user.getApellidoM());
         viewHolder.Email.setText(user.getEmail());
         viewHolder.contraseña.setText(user.getContraseña());
+
+        viewHolder.btn_delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                deleteuser(id);
+            }
+        });
+    }
+
+    private void deleteuser(String id) {
+        mfirestore.collection("users").document(id).delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void unused) {
+                Toast.makeText(activity, "Eliminado Corectamente", Toast.LENGTH_SHORT).show();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(activity, "error al eliminar", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @NonNull
@@ -45,6 +83,7 @@ public class userAdapter extends FirestoreRecyclerAdapter<user,userAdapter.ViewH
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView nombre,ApellidoP,ApellidoM,Email,contraseña;
+        ImageView btn_delete;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -53,6 +92,7 @@ public class userAdapter extends FirestoreRecyclerAdapter<user,userAdapter.ViewH
             ApellidoM = itemView.findViewById(R.id.apellidoM);
             Email = itemView.findViewById(R.id.email);
             contraseña = itemView.findViewById(R.id.contra);
+            btn_delete = itemView.findViewById(R.id.btn_eliminar);
         }
     }
 }
