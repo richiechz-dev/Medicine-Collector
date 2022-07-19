@@ -77,50 +77,41 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/edittext_name"
+            <EditText
+                android:id="@+id/txtNombre"
+                android:layout_width="374dp"
+                android:layout_height="52dp"
+                android:layout_above="@+id/txtNombre"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="26dp"
+                android:background="#30ffffff"
+                android:drawableLeft="@drawable/ic_profile_black"
+                android:drawablePadding="20dp"
+                android:ems="10"
                 android:hint="Nombre"
-                android:layout_marginBottom="10dp">
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/ic_profile_black"
-                    android:drawablePadding="10dp"/>
+            <EditText
+                android:id="@+id/txtEmail"
+                android:layout_width="374dp"
+                android:layout_height="52dp"
+                android:layout_above="@+id/txtEmail"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="24dp"
+                android:background="#30ffffff"
+                android:drawableLeft="@drawable/ic_profile_pin"
+                android:drawablePadding="20dp"
+                android:hint="Contraseña"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
 
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/edittext_email"
-                android:hint="email"
-                android:layout_marginBottom="10dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/ic_email_black"
-                    android:drawablePadding="10dp"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/edittext_password"
-                android:hint="password"
-                android:layout_marginBottom="10dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/ic_profile_pin"
-                    android:drawablePadding="10dp"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/btn_update"

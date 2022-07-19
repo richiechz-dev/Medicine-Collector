@@ -2,15 +2,25 @@ package com.example.recomed;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
@@ -19,14 +29,19 @@ import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+
 public class UserProfile extends AppCompatActivity {
 
     //Funcion de barra
     private int CurrentProgress = 0;
     private ProgressBar progressBar;
-    Button startProgress, btnCerrarSesion, btnEliminarCuenta;
+    Button startProgress, btnCerrarSesion, btnEliminarCuenta, btnGuardar;
     TextView perfil, textview_email;
-    TextInputEditText password;
+    TextInputLayout perfilInput, emailInput;
+    EditText perfilN, emailN;
 
     //Firebase
     FirebaseAuth mAuth;
@@ -45,9 +60,15 @@ public class UserProfile extends AppCompatActivity {
         //Variable de Perfil
         perfil = findViewById(R.id.textview_fullname);
         textview_email = findViewById(R.id.textview_email);
+
+        perfilN = findViewById(R.id.txtNombre);
+        emailN = findViewById(R.id.txtEmail);
+
         //btnCerrarSesion
         btnCerrarSesion = findViewById(R.id.btn_cerrar_sesion);
         btnEliminarCuenta = findViewById(R.id.eliminar_cuenta);
+        btnGuardar = findViewById(R.id.btn_update);
+
 
 
         mAuth = FirebaseAuth.getInstance();
@@ -69,14 +90,14 @@ public class UserProfile extends AppCompatActivity {
         });
 
 
-                btnCerrarSesion.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        mAuth.signOut();
-                        Intent intent = new Intent(UserProfile.this, MainActivity.class);
-                        startActivity(intent);
-                    }
-                });
+        btnCerrarSesion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mAuth.signOut();
+                Intent intent = new Intent(UserProfile.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     /*    btnEliminarCuenta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -95,6 +116,31 @@ public class UserProfile extends AppCompatActivity {
                 });
             }
         }); */
+
+
+        btnGuardar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String nombre = perfilN.getText().toString();
+                String email = emailN.getText().toString();
+
+                idUser = Objects.requireNonNull(mAuth.getCurrentUser()).getUid();
+                DocumentReference documentReference = fStore.collection("users"). document(idUser);
+
+                Map<String,Object> user=new HashMap<>();
+                user.put("nombre", nombre);
+                user.put("contraseña", email);
+
+                documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Log.d("TAG", "onSuccess: Datos registrados"+idUser);
+                    }
+                });
+            }
+        });
+
         //barra de progreso
         startProgress.setOnClickListener(new View.OnClickListener() {
             @Override

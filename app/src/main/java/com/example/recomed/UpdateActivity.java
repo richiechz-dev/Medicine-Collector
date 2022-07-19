@@ -60,7 +60,7 @@ public class UpdateActivity extends AppCompatActivity {
         map.put("nombre", name);
         map.put("ApellidoP", apeP);
         map.put("ApellidoM", apeM);
-        map.put("Contraseña", pswUp);
+        map.put("contraseña", pswUp);
 
         firebaseFirestore.collection("users").document(id).update(map).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
