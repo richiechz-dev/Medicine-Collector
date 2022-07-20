@@ -1,5 +1,6 @@
 package com.example.recomed;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -16,6 +17,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
@@ -42,6 +44,7 @@ public class UserProfile extends AppCompatActivity {
     TextView perfil, textview_email;
     TextInputLayout perfilInput, emailInput;
     EditText perfilN, emailN;
+    Activity activity;
 
     //Firebase
     FirebaseAuth mAuth;
@@ -98,24 +101,15 @@ public class UserProfile extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    /*    btnEliminarCuenta.setOnClickListener(new View.OnClickListener() {
+        btnEliminarCuenta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                AuthCredential credential = EmailAuthProvider.getCredential(user.getEmail(),user.getUid());
-                user.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if(task.isSuccessful()) {
-                            Intent intent = new Intent(UserProfile.this, MainActivity.class);
-                            startActivity(intent);
-                        }else{
-                            Toast.makeText(getApplicationContext(),"No se puedo Eliminar",Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
+                deleteuser(idUser);
+                mAuth.signOut();
+                Intent i = new Intent(UserProfile.this, MainActivity.class);
+                startActivity(i);
             }
-        }); */
+        });
 
 
         btnGuardar.setOnClickListener(new View.OnClickListener() {
@@ -153,6 +147,14 @@ public class UserProfile extends AppCompatActivity {
         });
 
 
+    }
+    private void deleteuser(String idUser) {
+        fStore.collection("users").document(idUser).delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void unused) {
+                Toast.makeText(activity, "Eliminado Corectamente", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 
