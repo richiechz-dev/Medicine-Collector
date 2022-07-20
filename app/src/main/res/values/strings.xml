@@ -99,7 +99,19 @@
     <string name="borrar">borrar</string>
     <string name="salir">salir</string>
     <string name="cristiano_ronaldo">Cristiano Ronaldo</string>
-    <string name="administrador">administrador</string>
+    <string name="administrador">Administrador</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="password">Password</string>
+    <string name="update">Update</string>
+    <string name="cerrar_sesion">Cerrar Sesion</string>
+    <string name="login">Login</string>
+    <string name="registrate">Registrate</string>
+    <string name="no_tienes_cuenta">¿No tienes cuenta?</string>
+    <string name="recolecci_n_de_medicamentos">Recolección de Medicamentos</string>
+    <string name="inicia_sesi_n_para_continuar">Inicia sesión para continuar</string>
+    <string name="olvid_su_contrase_a">¿Olvidó su contraseña?</string>
+    <string name="registrar">Registrar</string>
 </resources>

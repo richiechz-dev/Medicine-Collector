@@ -31,7 +31,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Nombre"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:id="@+id/apellidoP"
@@ -39,15 +40,17 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="ApellidoPaterno"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:id="@+id/apellidoM"
-                    android:layout_width="435dp"
+                    android:layout_width="337dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="ApellidoMaterno"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
@@ -63,21 +66,23 @@
                     android:layout_width="333dp"
                     android:layout_height="wrap_content"
                     android:text="Email"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:id="@+id/contra"
                     android:layout_width="331dp"
                     android:layout_height="wrap_content"
                     android:text="Contraseña"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
         </LinearLayout>
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/btn_editarU"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#0634BA"

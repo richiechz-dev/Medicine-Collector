@@ -2,10 +2,10 @@ package com.example.recomed.adpter;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.recomed.R;
+import com.example.recomed.UpdateActivity;
 import com.example.recomed.model.user;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
@@ -21,8 +22,6 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-
-import javax.xml.parsers.DocumentBuilder;
 
 public class userAdapter extends FirestoreRecyclerAdapter<user,userAdapter.ViewHolder> {
 
@@ -51,6 +50,14 @@ public class userAdapter extends FirestoreRecyclerAdapter<user,userAdapter.ViewH
         viewHolder.Email.setText(user.getEmail());
         viewHolder.contraseña.setText(user.getContraseña());
 
+        viewHolder.btn_edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(activity, UpdateActivity.class);
+                i.putExtra("id_user", id);
+                activity.startActivity(i);
+            }
+        });
         viewHolder.btn_delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -83,7 +90,7 @@ public class userAdapter extends FirestoreRecyclerAdapter<user,userAdapter.ViewH
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView nombre,ApellidoP,ApellidoM,Email,contraseña;
-        ImageView btn_delete;
+        ImageView btn_delete, btn_edit;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -93,6 +100,7 @@ public class userAdapter extends FirestoreRecyclerAdapter<user,userAdapter.ViewH
             Email = itemView.findViewById(R.id.email);
             contraseña = itemView.findViewById(R.id.contra);
             btn_delete = itemView.findViewById(R.id.btn_eliminar);
+            btn_edit = itemView.findViewById(R.id.btn_editarU);
         }
     }
 }
