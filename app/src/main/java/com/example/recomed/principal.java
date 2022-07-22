@@ -36,7 +36,7 @@ public class principal extends AppCompatActivity {
         btn_admin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(principal.this, MainAdmin.class);
+                Intent i = new Intent(principal.this,  vGenerarPdf.class);
                 startActivity(i);
             }
         });
