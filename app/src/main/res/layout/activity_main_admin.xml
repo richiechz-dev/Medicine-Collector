@@ -19,7 +19,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/cerrarSesAd"
         android:layout_width="340dp"
         android:layout_height="39dp"
         android:text="@string/cerrar_sesion"

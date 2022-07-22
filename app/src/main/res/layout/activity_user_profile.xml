@@ -139,10 +139,7 @@
                 android:text="Eliminar cuenta"
                 android:backgroundTint="@color/cardview_dark_background"
                 app:cornerRadius="20dp"/>
-
         </LinearLayout>
 
-
     </LinearLayout>
-
 </ScrollView>
