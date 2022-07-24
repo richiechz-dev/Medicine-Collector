@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".registro"
-    android:background="@drawable/fondo_azul">
+    android:background="@drawable/fondoregistro">
 
 
     <TextView
@@ -40,8 +40,8 @@
         android:layout_height="52dp"
         android:layout_below="@id/imageView"
         android:layout_marginStart="18dp"
-        android:layout_marginEnd="18dp"
         android:layout_marginTop="40dp"
+        android:layout_marginEnd="18dp"
         android:background="#30ffffff"
         android:drawableLeft="@drawable/ic_baseline_emoji_emotions_24"
         android:drawablePadding="20dp"
@@ -77,8 +77,8 @@
         android:layout_height="52dp"
         android:layout_below="@id/txtApellidoP"
         android:layout_marginStart="18dp"
-        android:layout_marginEnd="18dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="18dp"
         android:background="#30ffffff"
         android:drawableLeft="@drawable/ic_baseline_emoji_emotions_24"
         android:drawablePadding="20dp"
@@ -94,8 +94,8 @@
         android:layout_height="52dp"
         android:layout_below="@+id/txtApellidoM"
         android:layout_marginStart="18dp"
-        android:layout_marginEnd="18dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="18dp"
         android:background="#30ffffff"
         android:drawableLeft="@drawable/ic_baseline_email_24"
         android:drawablePadding="20dp"
@@ -111,8 +111,8 @@
         android:layout_height="52dp"
         android:layout_below="@id/txtEmail"
         android:layout_marginStart="18dp"
-        android:layout_marginEnd="18dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="18dp"
         android:background="#30ffffff"
         android:drawableLeft="@drawable/ic_baseline_lock_24"
         android:drawablePadding="20dp"
