@@ -55,10 +55,14 @@ public class MainActivity extends AppCompatActivity {
                 String email1 = email.getText().toString().trim();
                 String psw1 = psw.getText().toString().trim();
 
-                if(email1.isEmpty() && psw1.isEmpty()){
-                    Toast.makeText(MainActivity.this, "Ingresa los datos", Toast.LENGTH_SHORT).show();
+                if(email.getText().toString().equals("abdiel@gmail.com") && psw.getText().toString().equals("admin123")){
+                    startActivity(new Intent(MainActivity.this, MainAdmin.class));
                 }else{
-                    loginUser(email1, psw1);
+                    if(email1.isEmpty() && psw1.isEmpty()){
+                        Toast.makeText(MainActivity.this, "Ingresa los datos", Toast.LENGTH_SHORT).show();
+                    }else{
+                        loginUser(email1, psw1);
+                    }
                 }
             }
         });
