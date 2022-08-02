@@ -69,7 +69,7 @@ public class UserProfile extends AppCompatActivity {
         btnCerrarSesion = findViewById(R.id.btn_cerrar_sesion);
         btnEliminarCuenta = findViewById(R.id.eliminar_cuenta);
         btnGuardar = findViewById(R.id.btn_update);
-        btnmaps = findViewById(R.id.btnMaps);
+
 
 
 
@@ -80,13 +80,6 @@ public class UserProfile extends AppCompatActivity {
 
         textview_email.setText(user.getEmail());
 
-       btnmaps.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               Intent intent = new Intent(UserProfile.this, Maps.class);
-               startActivity(intent);
-           }
-       });
 
 
         //referenciar para obtener datos de las coleccines
