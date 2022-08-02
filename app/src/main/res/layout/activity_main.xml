@@ -93,9 +93,9 @@
         android:layout_alignEnd="@id/txtPsw"
         android:clickable="false"
         android:text="@string/olvid_su_contrase_a"
+        android:textAlignment="textEnd"
         android:textColor="@color/black"
-        android:textSize="15sp"
-        android:textAlignment="textEnd"/>
+        android:textSize="15sp" />
 
     <Button
         android:id="@+id/btnLogin"

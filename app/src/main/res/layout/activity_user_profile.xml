@@ -21,6 +21,7 @@
         </LinearLayout>
 
         <RelativeLayout
+            android:id="@+id/RDE"
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:background="#EDE5E5"
@@ -53,6 +54,36 @@
                 android:layout_toEndOf="@id/image_profile"
                 android:text="email"
                 android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/textview_fullname">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/btnMaps"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@id/txtMaps"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/icn_maps" />
+
+                    <TextView
+                        android:id="@+id/txtMaps"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/btnMaps"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:text="@string/mapa_de_contenedores"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </RelativeLayout>
         </RelativeLayout>
 
         <TextView

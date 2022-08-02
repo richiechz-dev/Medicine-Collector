@@ -34,7 +34,7 @@ public class vDonacion extends AppCompatActivity {
                         overridePendingTransition(0, 0);
                         return;
                     case R.id.dona:
-                        startActivity(new Intent(getApplicationContext(), vDonacion.class));
+                        startActivity(new Intent(getApplicationContext(), Maps.class));
                         overridePendingTransition(0, 0);
                         return;
                 }
