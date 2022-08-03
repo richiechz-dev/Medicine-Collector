@@ -104,8 +104,9 @@ public class UserProfile extends AppCompatActivity {
         btnEliminarCuenta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                deleteuser(idUser);
                 mAuth.signOut();
+                deleteuser(idUser);
+                FirebaseUser idUser = mAuth.getCurrentUser();
                 Intent i = new Intent(UserProfile.this, MainActivity.class);
                 startActivity(i);
             }
