@@ -21,34 +21,119 @@
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        app:itemTextColor="@drawable/selector"
         app:itemIconTint="@drawable/selector"
-        app:menu="@menu/menu_nav"
+        app:itemTextColor="@drawable/selector"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_nav" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="130dp"
-        android:layout_height="88dp"
-        android:layout_marginTop="244dp"
-        android:text="Vista Perfil"
-        app:layout_constraintBottom_toTopOf="@id/bottom_nav"
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="411dp"
+        android:layout_height="147dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.008" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/headerpdf" />
 
-    <Button
-        android:id="@+id/admin"
-        android:layout_width="116dp"
-        android:layout_height="67dp"
-        android:text="Administrador"
-        app:layout_constraintBottom_toTopOf="@id/bottom_nav"
+    <LinearLayout
+        android:layout_width="406dp"
+        android:layout_height="249dp"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/containerView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.521">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="206dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="204dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/aComprobante"
+                    android:layout_width="150dp"
+                    android:layout_height="165dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/backinicio">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="134dp"
+                        android:layout_height="134dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.096"
+                        app:srcCompat="@drawable/ic_baseline_sticky_note_2_24" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ticket"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold|italic"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/aRecomienda"
+                    android:layout_width="150dp"
+                    android:layout_height="165dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/backinicio">
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="134dp"
+                        android:layout_height="128dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.189"
+                        app:srcCompat="@drawable/ic_baseline_star_24" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Recomiendanos"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold|italic"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

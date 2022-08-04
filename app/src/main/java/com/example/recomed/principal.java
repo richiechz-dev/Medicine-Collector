@@ -2,6 +2,7 @@ package com.example.recomed;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,35 +14,24 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class principal extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
-
-    private Button btn_vista;
-    private Button btn_admin;
+    private ConstraintLayout ticket, recomienda;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
 
-        btn_vista = findViewById(R.id.button);
-        btn_admin = findViewById(R.id.admin);
-
-        btn_vista.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(principal.this, UserProfile.class);
-                startActivity(i);
-            }
-        });
-
-        btn_admin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(principal.this,  vGenerarPdf.class);
-                startActivity(i);
-            }
-        });
+        ticket = findViewById(R.id.aComprobante);
+        recomienda = findViewById(R.id.aRecomienda);
 
         bottomNavigationView = findViewById(R.id.bottom_nav);
+
+        ticket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(principal.this, vGenerarPdf.class));
+            }
+        });
 
         bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
             @Override
