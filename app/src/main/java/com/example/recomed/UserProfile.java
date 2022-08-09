@@ -38,7 +38,7 @@ public class UserProfile extends AppCompatActivity {
     private int CurrentProgress = 0;
     private ProgressBar progressBar;
     Button startProgress, btnCerrarSesion, btnEliminarCuenta, btnGuardar;
-    ImageView btnmaps;
+    ImageView bronce, plata, oro;
     TextView perfil, textview_email;
     TextInputLayout perfilInput, emailInput;
     EditText perfilN, emailN;
@@ -70,7 +70,7 @@ public class UserProfile extends AppCompatActivity {
         btnEliminarCuenta = findViewById(R.id.eliminar_cuenta);
         btnGuardar = findViewById(R.id.btn_update);
 
-
+        bronce = findViewById(R.id.bronce);
 
 
         mAuth = FirebaseAuth.getInstance();
@@ -144,6 +144,11 @@ public class UserProfile extends AppCompatActivity {
                 CurrentProgress = CurrentProgress + 2;
                 progressBar.setProgress(CurrentProgress);
                 progressBar.setMax(100);
+                if (CurrentProgress == 20){
+                    bronce.setImageResource(R.drawable.plata);
+                } else if (CurrentProgress == 40){
+                    bronce.setImageResource(R.drawable.oro);
+                }
             }
         });
 

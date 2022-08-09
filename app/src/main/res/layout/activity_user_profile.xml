@@ -76,19 +76,19 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="118dp">
+            android:layout_height="134dp">
 
             <TextView
-                android:layout_width="388dp"
+                android:layout_width="64dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="7dp"
-                android:layout_marginEnd="11dp"
+                android:layout_marginStart="174dp"
+                android:layout_marginTop="29dp"
+                android:layout_marginEnd="173dp"
                 android:layout_marginBottom="13dp"
-                android:text="Logros Obtenidos"
+                android:text="Rango"
                 android:textSize="15sp" />
 
             <ImageView
@@ -97,29 +97,11 @@
                 android:layout_height="59dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="33dp"
-                android:layout_marginTop="41dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="58dp"
+                android:layout_marginBottom="1dp"
                 android:src="@drawable/bronce" />
-
-            <ImageView
-                android:id="@+id/plata"
-                android:layout_width="52dp"
-                android:layout_height="59dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="100dp"
-                android:layout_marginTop="41dp"
-                android:src="@drawable/plata" />
-
-            <ImageView
-                android:id="@+id/oro"
-                android:layout_width="52dp"
-                android:layout_height="59dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="166dp"
-                android:layout_marginTop="40dp"
-                android:src="@drawable/oro" />
 
 
         </RelativeLayout>
