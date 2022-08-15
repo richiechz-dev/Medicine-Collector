@@ -55,9 +55,11 @@ public class MainActivity extends AppCompatActivity {
                 String email1 = email.getText().toString().trim();
                 String psw1 = psw.getText().toString().trim();
 
-                if(email.getText().toString().equals("abdiel@gmail.com") && psw.getText().toString().equals("admin123")){
+                if(email.getText().toString().equals("abdiel@gmail.com") && psw.getText().toString().equals("admin123")) {
                     startActivity(new Intent(MainActivity.this, MainAdmin.class));
-                }else{
+                }else if(email.getText().toString().equals("staff@gmail.com") && psw.getText().toString().equals("staff123")){
+                        startActivity(new Intent(MainActivity.this, StaffActivity.class));
+                }else {
                     if(email1.isEmpty() && psw1.isEmpty()){
                         Toast.makeText(MainActivity.this, "Ingresa los datos", Toast.LENGTH_SHORT).show();
                     }else{
