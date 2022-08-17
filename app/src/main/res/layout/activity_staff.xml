@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondostaff"
+    android:background="@drawable/fondo_azul"
     tools:context=".StaffActivity">
 
     <Button
@@ -192,17 +192,16 @@
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="356dp"
-        android:layout_height="65dp"
+        android:layout_width="319dp"
+        android:layout_height="64dp"
         android:text="ELEGIR CONTENEDOR"
         android:textColor="#000000"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.88" />
+        app:layout_constraintVertical_bias="0.886" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

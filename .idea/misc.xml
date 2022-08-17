@@ -25,7 +25,6 @@
         <entry key="..\:/Users/Dell i5/Documents/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/layout/fragment_desesperado.xml" value="0.17255434782608695" />
         <entry key="..\:/Users/Dell i5/Documents/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/layout/fragment_putamadrerichie.xml" value="0.17255434782608695" />
         <entry key="..\:/Users/Dell i5/Documents/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/layout/view_user_single.xml" value="0.264" />
-        <entry key="..\:/Users/GICRC/AndroidStudioProjects/RecoleccionMedicamentos1.0/app/src/main/res/layout/activity_user_profile.xml" value="0.264" />
         <entry key="..\:/Users/GICRC/Documents/RecoleccionMedicamentos1.0/app/src/main/res/layout/activity_principal.xml" value="0.25" />
         <entry key="..\:/Users/GICRC/Documents/RecoleccionMedicamentos1.0/app/src/main/res/layout/activity_user_profile.xml" value="0.264" />
         <entry key="..\:/Users/GICRC/Documents/recoMed/app/src/main/res/layout-w1240dp/content_scrolling.xml" value="0.1606425702811245" />
@@ -44,21 +43,24 @@
         <entry key="..\:/Users/alexd/OneDrive/Documentos/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/layout/activity_principal.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/alexd/OneDrive/Documentos/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/layout/activity_register.xml" value="0.17" />
         <entry key="..\:/Users/alexd/OneDrive/Documentos/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/layout/activity_registro.xml" value="0.22" />
-        <entry key="..\:/Users/alexd/OneDrive/Documentos/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/layout/activity_staff.xml" value="0.25" />
         <entry key="..\:/Users/alexd/OneDrive/Documentos/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/layout/view_user_single.xml" value="0.25" />
         <entry key="..\:/Users/moxaj/AndroidStudioProjects/recoMed/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/moxaj/AndroidStudioProjects/recoMed/app/src/main/res/layout/activity_principal.xml" value="0.21014492753623187" />
+        <entry key="..\:/Users/moxaj/Documents/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/drawable/backheader.xml" value="0.191" />
         <entry key="..\:/Users/moxaj/Documents/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/drawable/backinicio.xml" value="0.191" />
+        <entry key="..\:/Users/moxaj/Documents/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/drawable/backticket.xml" value="0.1" />
         <entry key="..\:/Users/moxaj/Documents/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/drawable/selector.xml" value="0.1945" />
         <entry key="..\:/Users/moxaj/Documents/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/layout/activity_main.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/moxaj/Documents/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/layout/activity_main_admin.xml" value="0.22146739130434784" />
         <entry key="..\:/Users/moxaj/Documents/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/layout/activity_maps.xml" value="0.2210144927536232" />
-        <entry key="..\:/Users/moxaj/Documents/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/layout/activity_principal.xml" value="0.22146739130434784" />
+        <entry key="..\:/Users/moxaj/Documents/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/layout/activity_principal.xml" value="0.264" />
         <entry key="..\:/Users/moxaj/Documents/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/layout/activity_registro.xml" value="0.11302083333333333" />
+        <entry key="..\:/Users/moxaj/Documents/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/layout/activity_staff.xml" value="0.11302083333333333" />
         <entry key="..\:/Users/moxaj/Documents/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/layout/activity_update.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/moxaj/Documents/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/layout/activity_user_profile.xml" value="0.22146739130434784" />
         <entry key="..\:/Users/moxaj/Documents/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/layout/activity_vdonacion.xml" value="0.2210144927536232" />
-        <entry key="..\:/Users/moxaj/Documents/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/layout/activity_vgenerar_pdf.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/moxaj/Documents/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/layout/activity_vgenerar_pdf.xml" value="0.264" />
+        <entry key="..\:/Users/moxaj/Documents/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/layout/view_user_single.xml" value="0.16" />
         <entry key="..\:/Users/moxaj/Documents/GitHub/RecoleccionMedicamentos1.0/app/src/main/res/menu/menu_nav.xml" value="0.253125" />
         <entry key="..\:/xampp/htdocs/RecoleccionMedicamentos1.0/app/src/main/res/layout/activity_principal.xml" value="0.25" />
         <entry key="..\:/xampp/htdocs/RecoleccionMedicamentos1.0/app/src/main/res/layout/activity_registro.xml" value="0.25" />
